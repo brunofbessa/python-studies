@@ -22,7 +22,7 @@ class Account:
             timezone = TimeZone('UTC', 0, 0)
         self.timezone = timezone
         
-        self.balance = float(initial_balance)
+        self._balance = Account.validate_real_number(initial_balance, min_value=0)
 
     @property
     def account_number(self):
