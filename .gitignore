@@ -1,2 +1,9 @@
 python-oop/project-3/env/*
 python-oop/project-4/env/*
+advanced-python-programming/env/*
+advanced-python-programming/chap-01/particle-simulator/__pycache__/*
+.DS_Store
+python-oop/project-3/.DS_Store
+python-oop/project-3/app/.DS_Store
+python-oop/.DS_Store
+python-oop/lecture_notes/.ipynb_checkpoints/*
