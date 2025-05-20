@@ -39,7 +39,7 @@ def visualize(simulator):
 def test_visualize():
     particles = [
         Particle(0.3, 0.5, 1.7),
-        Particle(0.0, -0.5, -0.1)
+        Particle(0.0, -0.5, -3.1)
     ]
     simulator = ParticleSimulator(particles)
     visualize(simulator)
@@ -56,4 +56,4 @@ def benchmark():
 
 if __name__ == '__main__':
 
-    benchmark()
+    test_visualize()

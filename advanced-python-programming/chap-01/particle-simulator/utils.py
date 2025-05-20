@@ -8,7 +8,7 @@ class Particle:
         self.ang_vel = ang_vel
 
     
-class ParticleSimulator:
+class ParticleSimulatorUnderPerformance:
     
     def __init__(self, particles):
         self.particles = particles
@@ -32,4 +32,21 @@ class ParticleSimulator:
                 p.y += dy
 
                 #3 - repeat for nsteps
+
+class ParticleSimulator:
+    
+    def __init__(self, particles):
+        self.particles = particles
+
+    def evolve(self, dt):
+        TIMESTEP = 0.000_01
+        nsteps = int(dt/TIMESTEP)
+
+        for p in self.particles:
+            t_x_ang = TIMESTEP * p.ang_vel
+
+            for i in range(nsteps):
+                norm = math.sqrt(p.x**2 + p.y**2)
+                p.x = p.x-t_x_ang * p.y/norm
+                p.y = p.y+t_x_ang * p.x/norm
 
